@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const mc = require('minepm')
 const client = new Discord.Client();
 const prefix = '!';
 const { ip, status_id, player_id, server_name } = require('./config.json')
@@ -11,8 +12,8 @@ client.on('message', (message) => {
 
 client.on('ready', async () => { 
     console.log(`${client.user.username} est en ligne !`);
-        const stats = client.channels.cache.get('817464142532182027')
-        const player = client.channels.cache.get('817464141588856923')
+        const stats = client.channels.cache.get(status_id)
+        const player = client.channels.cache.get(player_id)
         const res = await mc.ping(ip);
         setInterval(() => {
         client.user.setActivity(`${server_name} avec ${res.players.online} joueurs`, {type: 'WATCHING'});
