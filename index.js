@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const mc = require('minepm')
 const client = new Discord.Client();
-const prefix = '!';
-const { ip, status_id, player_id, server_name } = require('./config.json')
+const { ip, status_id, player_id, server_name, token, prefix } = require('./config.json')
 
 client.on('message', (message) => { 
     if (message.content === prefix + 'ping') {
@@ -26,4 +25,4 @@ client.on('ready', async () => {
         }, 5000);
 });
 
-client.login('DISCORD_TOKEN');
+client.login(token);
