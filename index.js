@@ -15,7 +15,7 @@ client.on('ready', async () => {
         const player = client.channels.cache.get(player_id)
         const res = await mc.ping(ip);
         setInterval(() => {
-        client.user.setActivity(`${server_name} avec ${res.players.online} joueurs`, {type: 'WATCHING'});
+        client.user.setActivity(`${server_name}`, {type: 'WATCHING'});
             if(res.other.status === 'online') {
                 stats.setName('🔓 • Status: En ligne')
             } else {
