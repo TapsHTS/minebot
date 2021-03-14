@@ -9,6 +9,7 @@
   "author": "TapsHTS",
   "license": "ISC",
   "dependencies": {
-    "minepm": "^1.0.1"
+    "minepm": "^1.0.1",
+    "discord.js": "^12.5.1"
   }
 }
